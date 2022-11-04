@@ -13,13 +13,12 @@ def password_generator():
     for i in range(num_of_numbers):
         password.append(str(random.randint(0,9)))
     random.shuffle(password)    
-    print (passw_leng)
-    print (num_of_capital_letters)
-    print (num_of_lower_case_letters)
-    print (num_of_numbers)
-    print (num_of_capital_letters + num_of_lower_case_letters + num_of_numbers)    
+    #print (passw_leng)
+    #print (num_of_capital_letters)
+    #print (num_of_lower_case_letters)
+    #print (num_of_numbers)
+    #print (num_of_capital_letters + num_of_lower_case_letters + num_of_numbers)    
     password_str= ''.join(password)
-    print ("la contraseña es:", password_str)
-    
-password_generator()
+    print ("la contraseña es:", password_str)    
 
+password_generator()
