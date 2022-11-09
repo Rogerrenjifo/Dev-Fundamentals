@@ -1,7 +1,31 @@
-"""password_generator"""
+"""inicio"""
 import random
+#diccionario ={"facebook":"12345678aA","Amazon": "12345678bB"}
+class AplicationInformation:
+    def __init__(self,page,password):
+        self.page =page
+        self.password =password
+    def __str__(self):
+        print ("transormando aplication information en string")
+        return f"name:{self.page} password {self.password}"
+class SaveInformation:
+    """guardar informacion en el txt"""
+    #diccionario[page]= pagepassword.generate_password() 
+    @staticmethod
+    def save_information(data):
+        txt=open('register.txt','a')
+        #a=f"nombre:{self.page} password {self.password} \n"
+        txt.write(str(data))
+        txt.close
+class ReadInformation:
+    def read_information(self):
+        txt=open('register.txt','r')
+        database= txt.read()
+        print (database)
+
+
 class PasswordGenerator:
-    """genera"""
+    """clase passwordGenerador"""
     def generate_password(self):
         """generate an aleatory password"""
         password = []
@@ -18,5 +42,3 @@ class PasswordGenerator:
         random.shuffle(password)
         password_str= ''.join(password)
         return password_str
-a=PasswordGenerator()
-print (a.generate_password())
